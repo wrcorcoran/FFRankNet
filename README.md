@@ -156,7 +156,7 @@ Ironically, I'd been steered away from this project for a while due to the lack 
 
 I processed data and calculated scores according to standard PPR format. After this, I combined the rows with their *next year's* scores. Then, I filtered each position by certain criteria (basic to eliminate outliers and bad examples). 
 
-Trivially, I made pairs between each index. For a pair $(i, j)$, $\text{label}_{ij} = 1$ if $ i > j$ and $0$ else.
+Trivially, I made pairs between each index. For a pair $(i, j)$, $\text{label}_{ij} = 1$ if $i > j$ and $0$ else.
 
 Then, I implemented a model using TensorFlow and Keras. It was a three-layer network using Keras Dense layers ($64$, $16$, and $8$). Each piece of data was in a pair, each element in the pair was passed through these layers and then the final layer is a subtract layer. This is passed into a sigmoid, which gives it a value between $[0, 1]$. 
 
